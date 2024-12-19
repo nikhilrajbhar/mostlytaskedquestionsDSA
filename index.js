@@ -2,23 +2,23 @@ console.log('start');
 
 // 1. find 2 number pair who's sum is zero
 
-const numbers = [-9, -8, -7, -5, 0 , 5 , 7, 6, 1]
+const numbers = [-9, -8, -7, -5, 0, 5, 7, 6, 1];
 const pairs = [];
 for (let i = 0; i < numbers.length; i++) {
-  for (let j = i + 1; j < numbers.length; j++) {
-    if (numbers[i] + numbers[j] === 0) {
-      pairs.push([numbers[i], numbers[j]]);
+    for (let j = i + 1; j < numbers.length; j++) {
+        if (numbers[i] + numbers[j] === 0) {
+            pairs.push([numbers[i], numbers[j]]);
+        }
     }
-  }
 }
 
 console.log(pairs) //  [ [ -7, 7 ], [ -5, 5 ] ]
 
 // 2. Guess the output of map method
 const outputNumbers = numbers.map((num) => {
-    num*2
+    num * 2
 });
-console.log(outputNumbers); 
+console.log(outputNumbers);
 // 
 // [
 //     undefined, undefined,
@@ -48,7 +48,7 @@ for (let i = 0; i < myName.length; i++) {
 const reversedstring = myNameArray.join("");
 console.log(reversedstring); //lihkin
 
-// 4. map
+// 4. group students on basis on age
 const students = [
     {
         name: "nikhil",
@@ -64,7 +64,7 @@ const students = [
         name: "akshay",
         age: 31,
         address: "ghatkopar"
-    },    {
+    }, {
         name: "vicky",
         age: 28,
         address: "diva"
@@ -87,4 +87,22 @@ console.log(groupbystudent);
 //     ],
 //     '31': [ { name: 'akshay', age: 31, address: 'ghatkopar' } ]
 // }
+
+// 5. 
+function abc() {
+    console.log(abc.xyz);
+}
+abc();
+abc.xyz = 200;
+abc.xyz = 300;
+abc();
+const numbers1 = [1,2,4,5];
+numbers1[100] = 6;
+// console.log(numbers1);
+// [ 1, 2, 4, 5, <96 empty items>, 6 ] empty items undefined(not sure)
+
+console.log(typeof typeof 100); //type of 100 is number which will printed as string "number" so its type will become string
+console.log([...'nikhil']); //[ 'n', 'i', 'k', 'h', 'i', 'l' ]
+const checkMap = [1,2,3,4].map((x) => x > 2); //[ false, false, true, true ]
+console.log(checkMap);
 
