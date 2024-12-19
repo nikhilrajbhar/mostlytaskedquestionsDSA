@@ -48,5 +48,43 @@ for (let i = 0; i < myName.length; i++) {
 const reversedstring = myNameArray.join("");
 console.log(reversedstring); //lihkin
 
+// 4. map
+const students = [
+    {
+        name: "nikhil",
+        age: 29,
+        address: "ghatkopar"
+    },
+    {
+        name: "krishna",
+        age: 29,
+        address: "ghatkopar"
+    },
+    {
+        name: "akshay",
+        age: 31,
+        address: "ghatkopar"
+    },    {
+        name: "vicky",
+        age: 28,
+        address: "diva"
+    }
+]
+let groupbystudent = {};
+for (let index = 0; index < students.length; index++) {
+    const element = students[index];
+    if (!groupbystudent[element.age]) {
+        groupbystudent[element.age] = [];
+    }
+    groupbystudent[element.age].push(element)
+}
+console.log(groupbystudent);
+// {
+//     '28': [ { name: 'vicky', age: 28, address: 'diva' } ],
+//     '29': [
+//       { name: 'nikhil', age: 29, address: 'ghatkopar' },
+//       { name: 'krishna', age: 29, address: 'ghatkopar' }
+//     ],
+//     '31': [ { name: 'akshay', age: 31, address: 'ghatkopar' } ]
+// }
 
-  
